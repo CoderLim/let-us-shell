@@ -20,13 +20,14 @@ fi
 ```bash
 # 将该文件保存为1.sh
 input=${1:-0} #表示取第2个参数，如果没有默认值为0
+
+#执行`sh 1.sh 20`，那么$1就是20，$0就是1.sh
 ```
 
-执行`sh 1.sh 20`，那么$1就是20，$0就是1.sh
 
-3. 如何判断参数是否已经设置
 
-  [详情](https://stackoverflow.com/questions/3601515/how-to-check-if-a-variable-is-set-in-bash)
+3. [如何判断参数是否已经设置](https://stackoverflow.com/questions/3601515/how-to-check-if-a-variable-is-set-in-bash)
+
 ```bash
 if [ -z ${var+x} ]; then 
   echo "var is unset"; 
