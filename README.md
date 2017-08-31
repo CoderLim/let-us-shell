@@ -1,11 +1,11 @@
 # let-us-shell
 
-1. if语句的正确写法，注意空格
+1. 语句的正确写法，注意空格，该有的不能少，不该有的不能有
 
 ```bash
-input=$1
-if [ $input -lt 10 ]; then
-  echo 'You should guess a greater number.'
+input=$1 #等号左右不能有空格
+if [ $input -lt 10 ]; then #[右边和]左边要有空格
+  echo 'You should guess a greater number.'
 elif [ $input -gt 10 ]; then
   echo 'You should guess a less numer'
 else 
