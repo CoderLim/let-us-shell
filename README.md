@@ -48,9 +48,27 @@ done
 
 5. set
 
-```
+```bash
 # 输出所有被执行的命令
 set -x
 # 当遇到指令报错时终止执行
 set -e
+```
+
+6. 重定向
+
+```bash
+# 0 STDIN 标准输入
+# 1 STDOUT 标准输出
+# 2 STDERR 标准错误
+#
+# 比如
+# 将'hello world'重定向到 1.txt
+echo 'hello world' > 1.txt
+# 等同于
+echo 'hello world' 1> 1.txt
+
+# 标准输出重定向1.txt，标准错误重定向到标准输出
+# 最终结果就是标准输出和错误都保存到1.txt
+echo 'hello world' 1> 1.txt 2>&1
 ```
