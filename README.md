@@ -34,3 +34,14 @@ if [ -z ${var+x} ]; then
 else echo "var is set to '$var'"; 
 fi
 ```
+
+4. 遍历当前目录，输出文件名称
+
+```bash
+for f in $(ls)
+do
+  if [ -f $f ]; then
+    echo $f
+  fi
+done
+```
