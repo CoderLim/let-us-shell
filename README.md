@@ -84,6 +84,12 @@ sed '/text1/p' 1.txt
 8. awk常用操作
 
 ```bash
-# 打印1.txt
+# 打印1.txt中每行中用空格分开的第一列数据
 awk '{print $1}' 1.txt
+# 打印1.txt中每行中用冒号分开的第一列数据
+awk -F: '{print $1}' 1.txt
+# 可以设置执行脚本前后的操作
+awk 'BEGIN {print "begin"} {print $1} END {print "end"}' 1.txt
+# 使用变量（也可以使用流程控制语句）
+awk 'BEGIN {count=0} {count=count+1} END {print count}' 1.txt
 ```
