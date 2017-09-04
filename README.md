@@ -93,3 +93,25 @@ awk 'BEGIN {print "begin"} {print $1} END {print "end"}' 1.txt
 # 使用变量（也可以使用流程控制语句）
 awk 'BEGIN {count=0} {count=count+1} END {print count}' 1.txt
 ```
+
+9. read
+
+```bash
+# -p 表示“File:”为提示
+read -p "File:" file
+# -a 表示读取一个数组
+read -p "Files:" -a files
+echo ${files[0]} ${files[1]}
+```
+
+10. here document
+
+```bash
+# here document是用来显示文档的一种形式
+# 如下EOF只是一个标志，可以写成任意名称
+cat << EOF
+# 这里写文字
+# 这里写文字
+# 这里写文字
+EOF
+```
