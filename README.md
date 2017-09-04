@@ -72,3 +72,18 @@ echo 'hello world' 1> 1.txt
 # 最终结果就是标准输出和错误都保存到1.txt
 echo 'hello world' 1> 1.txt 2>&1
 ```
+
+7. sed常用操作
+
+```bash
+# 用字符串text2替换1.txt中的字符串text1，然后重定向到2.txt
+sed 's/text1/text2' 1.txt > 2.txt
+# 打印匹配字符串text1的行
+sed '/text1/p' 1.txt
+```
+8. awk常用操作
+
+```bash
+# 打印1.txt
+awk '{print $1}' 1.txt
+```
