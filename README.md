@@ -115,3 +115,15 @@ cat << EOF
 # 这里写文字
 EOF
 ```
+
+11. 退出码
+
+[more](https://shapeshed.com/unix-exit-codes/)
+
+```bash
+cat file.txt
+hello world
+# $?可以拿到上条命令执行的退出码
+echo $?
+0
+```
