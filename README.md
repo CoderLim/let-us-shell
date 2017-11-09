@@ -79,7 +79,8 @@ echo 'hello world' 1> 1.txt 2>&1
 # 用字符串text2替换1.txt中的字符串text1，然后重定向到2.txt
 sed 's/text1/text2' 1.txt > 2.txt
 # 打印匹配字符串text1的行
-sed '/text1/p' 1.txt
+# -n的作用是只打印匹配行，其他不打印，默认是打印的
+sed -n '/text1/p' 1.txt
 ```
 8. awk常用操作
 
