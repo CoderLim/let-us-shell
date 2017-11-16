@@ -48,7 +48,11 @@ done
 
 5. set
 
+昨天`阮一峰`发表了一篇文章，可以[参考一下](http://www.ruanyifeng.com/blog/2017/11/bash-set.html)
+
 ```bash
+# 遇到不存在的变量打印error
+set -u
 # 输出所有被执行的命令
 set -x
 # 当遇到指令报错时终止执行
