@@ -135,3 +135,18 @@ hello world
 echo $?
 0
 ```
+
+12. curl
+
+```bash
+# get
+curl http://www.xxx.com
+# post
+curl -X POST http://www.xxx.com
+# post 数据
+curl -d '这里是数据' http://www.xxx.com
+# 设置header
+curl -H 'key1: value1' -H 'key2: value2' http://www.xxx.com
+# 设置cookie
+curl -b 'key1=value1;key2=value2' http://www.xxx.com
+```
