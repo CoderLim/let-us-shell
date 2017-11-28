@@ -85,6 +85,8 @@ sed 's/text1/text2' 1.txt > 2.txt
 # 打印匹配字符串text1的行
 # -n的作用是只打印匹配行，其他不打印，默认是打印的
 sed -n '/text1/p' 1.txt
+# -i表示直接修改文件内容
+sed -i 's/text1/text2/g' *
 ```
 8. awk常用操作
 
