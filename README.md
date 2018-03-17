@@ -169,3 +169,19 @@ curl -H 'key1: value1' -H 'key2: value2' http://www.xxx.com
 # 设置cookie
 curl -b 'key1=value1;key2=value2' http://www.xxx.com
 ```
+
+13. 文件处理
+
+```bash
+f=~/Desktop/1.txt
+file=$(basename $f)
+# 获取文件名
+filename="${f%.*}"
+# 扩展名
+extension="${f##*.}"
+# 所在目录
+directory=$(dirname $f)
+echo $(basename $filename)
+echo $(basename $extension)
+echo $(basename $directory)
+```
