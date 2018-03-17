@@ -46,10 +46,19 @@ do
 done
 
 # 打印desktop所有文件
-for f in ~/Desktop/*
+for f in ./Camera/*
 do
   if [ -f $f ]; then
-    echo $f
+    file=$(basename $f)
+    # 获取文件名
+    filename="${f%.*}"
+    # 扩展名
+    extension="${f##*.}"
+    # 所在目录
+    directory=$(dirname $f)
+    echo $(basename $filename)
+    echo $(basename $extension)
+    echo $(basename $directory)
   fi
 done
 ```
