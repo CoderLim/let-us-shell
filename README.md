@@ -44,6 +44,14 @@ do
     echo $f
   fi
 done
+
+# 打印desktop所有文件
+for f in ~/Desktop/*
+do
+  if [ -f $f ]; then
+    echo $f
+  fi
+done
 ```
 
 5. set
