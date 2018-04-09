@@ -185,3 +185,19 @@ echo $(basename $filename)
 echo $(basename $extension)
 echo $(basename $directory)
 ```
+
+14. nohup
+
+```bash
+# 当登陆ssh后用以下方式执行命令，可以在关闭ssh后继续执行
+# 末尾的&表示后台运行
+nohup <command> >/dev/null 2>&1 &
+```
+15. df/du
+
+```bash
+# 查看磁盘
+df -h 
+# 查看文件占空间多少
+du -sh 
+```
