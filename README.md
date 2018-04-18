@@ -201,3 +201,12 @@ df -h
 # 查看文件占空间多少
 du -sh 
 ```
+
+16. screen
+
+```bash
+screen 生成新pane
+screen -ls 显示所有pane
+ctrl+a * 2: 切换pane
+ctrl+a+n: 切换到下一pane
+```
