@@ -210,3 +210,9 @@ screen -ls 显示所有pane
 ctrl+a * 2: 切换pane
 ctrl+a+n: 切换到下一pane
 ```
+
+17. netstat  / lsof
+
+```base
+netstate -lnp
+```
