@@ -216,3 +216,11 @@ ctrl+a+n: 切换到下一pane
 ```base
 netstate -lnp
 ```
+
+18. 执行远程命令
+
+```base
+VAR1='~/Desktop'
+# 如果使用变量，这里要用双引号
+ssh coderlim@10.1.1.1 "ls $VAR1"
+```
