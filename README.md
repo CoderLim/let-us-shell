@@ -224,3 +224,14 @@ VAR1='~/Desktop'
 # 如果使用变量，这里要用双引号
 ssh coderlim@10.1.1.1 "ls $VAR1"
 ```
+
+19. 并发执行
+
+```
+# 通过把每个处理程序放到后台(&)
+# 实现并发执行
+process1 &
+process2 &
+process3 &
+wait
+```
