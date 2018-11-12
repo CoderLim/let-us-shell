@@ -107,6 +107,8 @@ sed -i 's/text1/text2/g' *
 ```
 8. awk常用操作
 
+[阮一峰](http://www.ruanyifeng.com/blog/2018/11/awk.html)
+
 ```bash
 #
 #  虾面用到的引号是单引号，单引号，单引号，双信号无效！
