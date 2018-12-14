@@ -215,13 +215,13 @@ ctrl+a+n: 切换到下一pane
 
 17. netstat  / lsof
 
-```base
+```bash
 netstate -lnp
 ```
 
 18. 执行远程命令
 
-```base
+```bash
 VAR1='~/Desktop'
 # 如果使用变量，这里要用双引号
 ssh coderlim@10.1.1.1 "ls $VAR1"
@@ -236,4 +236,22 @@ process1 &
 process2 &
 process3 &
 wait
+```
+
+20. for的用法
+
+```bash
+#1
+for file in $(ls); do
+  # TODO:
+done
+
+#2 不能把字符串直接替换到$list的位置
+list="类型1 类型2 类型3"
+for type in $list; do
+done
+
+#3 
+for num in {1..5}; do
+done
 ```
