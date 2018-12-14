@@ -246,10 +246,14 @@ for file in $(ls); do
   # TODO:
 done
 
-#2 不能把字符串直接替换到$list的位置
+#2
 list="类型1 类型2 类型3"
 for type in $list; do
 done
+# 或者（不能加引号）
+for type in 类型1 类型2 类型3; do
+done
+
 
 #3 
 for num in {1..5}; do
