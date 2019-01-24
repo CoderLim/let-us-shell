@@ -259,3 +259,27 @@ done
 for num in {1..5}; do
 done
 ```
+
+21. !的用法
+
+[参考](https://mp.weixin.qq.com/s/Au4doF454gte2K5sVt4qYQ)
+
+```bash
+ls /usr/local/1.text
+# 执行上一条命令
+!!
+!! | less
+# 上一条命令的最后一个参数
+ll !$
+# 上条命令的第一个参数
+ll !^
+# 使用上条命令的所有参数
+fin -name "test.zip"  #这里find输错了。
+find $*
+# 使用上条命令的某个参数
+cp -rf dira dirb/   #将dira拷贝到dirb
+ls -l !cp:2        #查看dira的内容
+# 执行history中的命令
+!1234
+```
+
