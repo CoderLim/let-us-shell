@@ -273,6 +273,8 @@ ls /usr/local/1.text
 ll !$
 # 上条命令的第一个参数
 ll !^
+# 去掉最后一个参数执行上一条命令
+!:-
 # 使用上条命令的所有参数
 fin -name "test.zip"  #这里find输错了。
 find $*
