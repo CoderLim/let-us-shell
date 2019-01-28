@@ -287,3 +287,10 @@ ls -l !cp:2        #查看dira的内容
 rm !(*.cfg)  
 ```
 
+22. find的用法
+
+```
+find / -name ump-ui
+# 反向查找(好像必须加引号)
+find . ! -name '*.csv'
+```
