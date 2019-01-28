@@ -283,5 +283,7 @@ cp -rf dira dirb/   #将dira拷贝到dirb
 ls -l !cp:2        #查看dira的内容
 # 执行history中的命令
 !1234
+# 删除需谨慎
+rm !(*.cfg)  
 ```
 
