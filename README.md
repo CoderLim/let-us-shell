@@ -294,3 +294,6 @@ find / -name ump-ui
 # 反向查找(好像必须加引号)
 find . ! -name '*.csv'
 ```
+
+23. xargs 与 管道
+[详细](https://www.cnblogs.com/wangqiguo/p/6464234.html)
