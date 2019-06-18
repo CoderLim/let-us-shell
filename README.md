@@ -69,11 +69,11 @@ done
 
 ```bash
 # 遇到不存在的变量打印error
-set -u
+set -u 等同于 set -o nounset
 # 输出所有被执行的命令
-set -x
+set -x 等同于 set -o xtrace
 # 当遇到指令报错时终止执行
-set -e
+set -e 等同于 set -o errexit
 ```
 
 6. 重定向
@@ -297,3 +297,58 @@ find . ! -name '*.csv'
 
 23. xargs 与 管道
 [详细](https://www.cnblogs.com/wangqiguo/p/6464234.html)
+
+24. readonly local
+
+```
+readonly variable1='123'
+local variable1='123'
+```
+
+25. 使用 $() 代替 `（反单引号）
+
+```
+# both commands below print out : A-B-C-D
+echo "A-`echo B-\`echo C-\\\`echo D\\\`\``"
+echo "A-$(echo B-$(echo C-$(echo D)))"
+```
+
+$() 的优点
+- 支持嵌套
+- 不用转译
+- 反引号与单引号容易搞混
+
+26. 使用 [[]] 代替 []
+
+```
+[ "${name}" \> "a" -o "${name}" \< "m" ]
+[[ "${name}" > "a" && "${name}" < "m" ]]
+
+# [[]] 支持多种新功能：||、&&、<、==、=～
+[[ "$t" =~ [abc] ]] # 正则
+
+# 从 bash3.2 开始，通配符和正则都不能用引号包裹了，如果用引号包裹则是字符串，所以如果表达式里有空格，必须存储到一个变量里
+r="a b+"
+[[ "a bbb"=~$r ]]
+
+```
+
+27. echo 不是唯一的调试方法
+
+```
+# 进行语法检查
+bash -n 1.sh
+# 跟踪脚本里每一个命令的执行
+bash -v 1.sh
+# 跟踪脚本里每一个命令的执行，并附加扩充信息
+bash -x 1.sh
+```
+
+## 参考
+
+1. [! 的用法](https://mp.weixin.qq.com/s/Au4doF454gte2K5sVt4qYQ)
+2. [xargs 与 管道](https://www.cnblogs.com/wangqiguo/p/6464234.html)
+3. [阮一峰：awk 的常用操作](http://www.ruanyifeng.com/blog/2018/11/awk.html)
+4. [阮一峰：set 的用法](http://www.ruanyifeng.com/blog/2017/11/bash-set.html)
+5. [58沈剑：6条 shell 小技巧](https://mp.weixin.qq.com/s/A8swyecFDEV9_3XVZ7jwbg)
+
