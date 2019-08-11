@@ -296,7 +296,7 @@ find . ! -name '*.csv'
 ```
 
 23. xargs 与 管道
-[详细](https://www.cnblogs.com/wangqiguo/p/6464234.html)
+[阮一峰](http://www.ruanyifeng.com/blog/2019/08/xargs-tutorial.html)
 
 24. readonly local
 
